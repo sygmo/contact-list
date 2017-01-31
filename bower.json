@@ -1,0 +1,17 @@
+{
+  "name": "contact-list",
+  "homepage": "https://github.com/sygmo/contact-list",
+  "authors": [
+    "sygmo <sydney.mercier91@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
