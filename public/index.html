@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Contact List</title>
 	<script src="angular/angular.js"></script>
+	<script src="controllers/controller.js"></script>
 	<link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
+	<div class="container" ng-controller="appCtrl">
 		<h1>Contact List App</h1>
 		<input ng-model="test">
 		{{test}}
 		<!-- two-way binding -->
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Number</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="contact in contactList">
+					<td>{{ contact.name }}</td>
+					<td>{{ contact.email }}</td>
+					<td>{{ contact.number }}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
