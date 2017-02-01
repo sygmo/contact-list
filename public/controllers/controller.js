@@ -10,6 +10,13 @@ myApp.controller('appCtrl', ['$scope', '$http', function appCtrl($scope, $http) 
 		$scope.contactList = res.data;
 	}); 
 
+	$scope.addContact = function() {
+		console.log($scope.contact);
+		$http.post('/contactlist', $scope.contact).then(function (response){
+			console.log(response);
+		});
+		// $scope.contact --> data we're sending to the server
 
+	};
 
 }])
